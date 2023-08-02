@@ -1,0 +1,97 @@
+[
+    {
+        "name": "com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+        "methods": [
+            {
+                "name": "<init>",
+                "parameterTypes": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "name": "java.lang.Class",
+        "methods": [
+            {
+                "name": "getRecordComponents",
+                "parameterTypes": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "name": "java.lang.Record",
+        "queryAllDeclaredMethods": true,
+        "allDeclaredFields": true
+    },
+    {
+        "name": "java.lang.String",
+        "methods": [
+            {
+                "name": "trim",
+                "parameterTypes": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "name": "java.lang.reflect.RecordComponent",
+        "methods": [
+            {
+                "name": "getName",
+                "parameterTypes": [
+                    
+                ]
+            },
+            {
+                "name": "getType",
+                "parameterTypes": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "name": "java.util.concurrent.atomic.AtomicReference",
+        "fields": [
+            {
+                "name": "value"
+            }
+        ]
+    },
+    {
+        "name": "tech.vineyard.service.model.Input",
+        "queryAllDeclaredMethods": true,
+        "allDeclaredFields": true,
+        "queryAllDeclaredConstructors": true,
+        "methods": [
+            {
+                "name": "<init>",
+                "parameterTypes": [
+                    "java.lang.Class",
+                    "tech.vineyard.service.model.Parameter",
+                    "java.lang.String",
+                    "java.util.List"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "tech.vineyard.service.model.Parameter",
+        "queryAllDeclaredMethods": true,
+        "allDeclaredFields": true,
+        "queryAllDeclaredConstructors": true,
+        "methods": [
+            {
+                "name": "<init>",
+                "parameterTypes": [
+                    "java.lang.Class",
+                    "java.lang.String"
+                ]
+            }
+        ]
+    }
+]

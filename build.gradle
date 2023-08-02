@@ -1,0 +1,46 @@
+plugins {
+	id 'java'
+	id 'org.graalvm.buildtools.native' version '0.9.23'
+	id 'me.champeau.jmh' version '0.7.1'
+}
+
+dependencies {
+	implementation('com.fasterxml.jackson.core:jackson-databind:2.15.2')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.9.2')
+}
+
+repositories {
+    mavenCentral()
+}
+
+task runApp(type: JavaExec) {
+	classpath sourceSets.main.runtimeClasspath
+	mainClass.set(project.findProperty("mainClass"))
+	args(project.findProperty("inputFile"))
+	doNotTrackState("app should always run")
+}
+
+graalvmNative {
+	binaries {
+		main {
+			mainClass.set(project.findProperty("mainClass"))
+			runtimeArgs(project.findProperty("inputFile"))
+		}
+	}
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "STANDARD_OUT"
+	}
+}
+
+jmh {
+	includes = [ 'TrimBenchmark' ]
+	fork = 1
+	warmupIterations = 4
+	warmup = '5s'
+	iterations = 4
+	timeOnIteration = '10s'
+}

@@ -1,0 +1,9 @@
+{
+  "outputClass": "java.lang.String",
+  "current": {
+    "klass": "java.lang.String",
+    "json": "\" to be trimmed \""
+  },
+  "methodName": "trim",
+  "parameters": []
+}
